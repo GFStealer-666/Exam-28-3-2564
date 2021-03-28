@@ -1,0 +1,178 @@
+ int box1, box2, box3, x;
+            int no, num;
+            char player;
+
+            box1 = 0;
+            box2 = 0;
+            box3 = 0;
+             x = 1;
+             player = 'A';
+
+            while (x == 1)
+            {
+                Console.Write("Bucket 1 boxs : ");
+                box1 = int.Parse(Console.ReadLine());
+                Console.Write("Bucket 2 boxs : ");
+                box2 = int.Parse(Console.ReadLine());
+                Console.Write("Bucket 3 boxs : ");
+                box3 = int.Parse(Console.ReadLine());
+
+               
+
+                if (box1 < 0 || box2 < 0 || box3 < 0)
+                {
+                    Console.WriteLine(" ");
+
+                    Console.WriteLine("Invaild number input, please RE-Enter it");
+
+                }
+
+                else if (box1 == 0 && box2 == 0 && box3 == 0)
+                {
+                    Console.WriteLine(" ");
+
+                    Console.WriteLine("Invaild number input, please RE-Enter it");
+
+                }
+                else if (box1 >=0 && box2 >= 0 && box3 >= 0)
+                {
+                    x = 0;
+                }
+                
+                
+            }                                              
+            
+            Console.WriteLine("Bucket 1 boxes left : {0} , Bucket 2 boxes left : {1} , Bucket 3 boxes left : {2} ", box1, box2, box3);                       
+        
+            while (box1 > 0 && box2 >0 && box3 > 0)
+            {
+
+                Console.WriteLine(" ");
+                
+                Console.WriteLine("Now is player {0} playing!", player);
+
+                Console.WriteLine(" ");
+                
+                Console.Write("No. of bucket : ");
+                no = int.Parse(Console.ReadLine());
+                
+                Console.WriteLine(" ");
+                
+                Console.Write("How many boxs? : ");
+                num = int.Parse(Console.ReadLine());                
+                                                                              
+                if (no > 3 || no <0)
+                {
+                    Console.WriteLine(" ");
+                    Console.WriteLine("Invaild input number ,player {0} please RE-Enter it",player);
+                    Console.WriteLine(" ");
+
+                }
+                if (num  > 2 || num < 0)
+                {
+                    Console.WriteLine(" ");
+                    Console.WriteLine("Invaild input number ,player {0} please RE-Enter it", player);
+                    Console.WriteLine(" ");
+                }
+              
+                if (no == 1)
+                { 
+                    if (num > box1)
+                    {
+                        Console.WriteLine(" ");
+
+                        Console.WriteLine("Error");
+                        break;
+                        
+                       
+                    }
+                        box1 = box1 - num;
+                    
+                    Console.WriteLine(" ");
+
+                    if (player == 'A')
+                    {
+                        player = 'B';
+                    }
+                    else if (player == 'B')
+                    {
+                        player = 'A';
+                    }
+                }
+                
+                if (no == 2 )
+                {
+                    if (num > box2)
+                    {
+                        Console.WriteLine(" ");
+
+                        Console.WriteLine("Error");
+                        break;
+
+
+                    }
+                    box2 = box2 - num;
+                    Console.WriteLine(" ");
+
+                    if (player == 'A')
+                    {
+                        player = 'B';
+                    }
+                    else if (player == 'B')
+                    {
+                        player = 'A';
+                    }
+                }
+
+                if (no == 3 )
+                {
+                    if (num > box3)
+                    {
+                        Console.WriteLine(" ");
+
+                       Console.WriteLine("Error");
+                        break;
+
+
+                    }
+                    box3 = box3 - num;
+                    Console.WriteLine(" ");
+                    
+                    if (player == 'A')
+                    {
+                        player = 'B';
+                    }
+                    else if (player == 'B')
+                    {
+                        player = 'A';
+                    }
+                }
+
+                if (box1 >= 0 && box2 >= 0 && box3 >= 0)
+                {
+                    Console.WriteLine("Bucket 1 boxes left : {0} , Bucket 2 boxes left : {1} , Bucket 3 boxes left : {2} ", box1, box2, box3);
+                }
+                
+
+
+                if (player == 'A')
+                {
+                    if (box1 == 0 && box2 == 0 && box3 == 0)
+                    {
+                        Console.WriteLine(" ");
+                        Console.WriteLine("Player A has Victorious!");
+                    }
+                }
+                
+                if (player == 'B')
+                {
+                    if (box1 == 0 && box2 == 0 && box3 == 0)
+                    {
+                        Console.WriteLine(" ");
+                        Console.WriteLine("Player B has Victorious!");
+                    }
+                }
+
+            }
+            Console.ReadLine();
+        
