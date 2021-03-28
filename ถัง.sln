@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "สอบ", "สอบ\สอบ.csproj", "{80C2516C-A93F-4EC5-9ABB-A886EDAEC8B7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80C2516C-A93F-4EC5-9ABB-A886EDAEC8B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80C2516C-A93F-4EC5-9ABB-A886EDAEC8B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80C2516C-A93F-4EC5-9ABB-A886EDAEC8B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80C2516C-A93F-4EC5-9ABB-A886EDAEC8B7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B9AD0D23-17B4-44A7-A3D0-04BA70ACAC78}
+	EndGlobalSection
+EndGlobal
