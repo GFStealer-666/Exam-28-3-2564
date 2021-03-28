@@ -1,4 +1,12 @@
- int box1, box2, box3, x;
+  using System;
+
+namespace สอบ
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int box1, box2, box3, x;
             int no, num;
             char player;
 
@@ -44,7 +52,7 @@
             
             Console.WriteLine("Bucket 1 boxes left : {0} , Bucket 2 boxes left : {1} , Bucket 3 boxes left : {2} ", box1, box2, box3);                       
         
-            while (box1 > 0 && box2 >0 && box3 > 0)
+            while (box1 >= 0 && box2 >=0 && box3 >= 0)
             {
 
                 Console.WriteLine(" ");
@@ -59,32 +67,33 @@
                 Console.WriteLine(" ");
                 
                 Console.Write("How many boxs? : ");
-                num = int.Parse(Console.ReadLine());                
+                num = int.Parse(Console.ReadLine());              
                                                                               
-                if (no > 3 || no <0)
+                if (no > 3 || no <=0)
                 {
                     Console.WriteLine(" ");
                     Console.WriteLine("Invaild input number ,player {0} please RE-Enter it",player);
                     Console.WriteLine(" ");
-
+                    continue;
                 }
-                if (num  > 2 || num < 0)
+                if (num  > 2 || num <= 0)
                 {
                     Console.WriteLine(" ");
                     Console.WriteLine("Invaild input number ,player {0} please RE-Enter it", player);
                     Console.WriteLine(" ");
+                    continue;
                 }
               
                 if (no == 1)
                 { 
-                    if (num > box1)
+                    if (num > box1 && num<=2)
                     {
                         Console.WriteLine(" ");
 
-                        Console.WriteLine("Error");
-                        break;
-                        
-                       
+                        Console.WriteLine("Invaild input number ,player {0} please RE-Enter it", player);
+                        continue;
+
+
                     }
                         box1 = box1 - num;
                     
@@ -102,12 +111,12 @@
                 
                 if (no == 2 )
                 {
-                    if (num > box2)
+                    if (num > box2 && num <=2)
                     {
                         Console.WriteLine(" ");
 
-                        Console.WriteLine("Error");
-                        break;
+                        Console.WriteLine("Invaild input number ,player {0} please RE-Enter it", player);
+                        continue;
 
 
                     }
@@ -126,14 +135,14 @@
 
                 if (no == 3 )
                 {
-                    if (num > box3)
+                    if (num > box3 && num <= 2)
                     {
                         Console.WriteLine(" ");
 
-                       Console.WriteLine("Error");
-                        break;
+                       Console.WriteLine("Invaild input number ,player {0} please RE-Enter it", player);
 
-
+                        continue;
+                        
                     }
                     box3 = box3 - num;
                     Console.WriteLine(" ");
@@ -145,7 +154,7 @@
                     else if (player == 'B')
                     {
                         player = 'A';
-                    }
+                    } 
                 }
 
                 if (box1 >= 0 && box2 >= 0 && box3 >= 0)
@@ -161,6 +170,7 @@
                     {
                         Console.WriteLine(" ");
                         Console.WriteLine("Player A has Victorious!");
+                        break;
                     }
                 }
                 
@@ -170,9 +180,15 @@
                     {
                         Console.WriteLine(" ");
                         Console.WriteLine("Player B has Victorious!");
+                        break;
                     }
                 }
-
+                
             }
             Console.ReadLine();
-        
+        }
+
+            
+        }
+    }
+
